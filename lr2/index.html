@@ -807,14 +807,15 @@ cd ..
 </code></pre>
 <p>Затем из корня проекта:</p>
 <pre><code class="language-bash">export DATABASE_URL=&quot;postgresql+psycopg://postgres:postgres@localhost:5433/time_manager&quot;
+source .venv/bin/activate
 
-lab2/.venv/bin/python lab2/sum_threading.py
-lab2/.venv/bin/python lab2/sum_multiprocessing.py
-lab2/.venv/bin/python lab2/sum_async.py
+python lab2/sum_threading.py
+python lab2/sum_multiprocessing.py
+python lab2/sum_async.py
 
-lab2/.venv/bin/python lab2/parse_threading.py
-lab2/.venv/bin/python lab2/parse_multiprocessing.py
-lab2/.venv/bin/python lab2/parse_async.py
+python lab2/parse_threading.py
+python lab2/parse_multiprocessing.py
+python lab2/parse_async.py
 </code></pre>
 <p>Порт <code>5433</code> используется только с хоста. Внутри Docker-сети база доступна как <code>db:5432</code>.</p>
 <h2 id="_5">Теория для защиты</h2>
